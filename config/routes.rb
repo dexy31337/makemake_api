@@ -1,4 +1,4 @@
-require 'api_contraints'
+require 'api_constraints'
 
 MakemakeApi::Application.routes.draw do
   #Определение API
