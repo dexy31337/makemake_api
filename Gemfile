@@ -37,12 +37,11 @@ end
 
 group :development do
   gem 'sqlite3'
-  gem 'rspec-rails' , '>= 3.0.1'
-
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec-rails' , '>= 3.0.1'
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'ffaker'
 end
