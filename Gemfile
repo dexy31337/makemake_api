@@ -40,10 +40,12 @@ group :development do
 end
 
 group :test do
-  gem "rspec-rails"
-  gem "factory_girl_rails"
+  gem 'rspec-rails' , '>= 3.0.1'
+  gem 'factory_girl_rails'
   gem 'ffaker'
 end
+
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
