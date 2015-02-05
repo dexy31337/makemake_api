@@ -54,4 +54,8 @@ RSpec.configure do |config|
   config.before(:each, type: :controller) do
     include_default_accept_headers
   end
+
+  config.mock_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
 end

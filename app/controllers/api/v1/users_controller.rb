@@ -29,7 +29,8 @@ class Api::V1::UsersController < ApplicationController
     user.destroy
     head 204
   end
-  
+
+
   private
 
     def user_params
