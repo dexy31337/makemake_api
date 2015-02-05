@@ -1,6 +1,7 @@
 require 'api_constraints'
 
 MakemakeApi::Application.routes.draw do
+  mount SabisuRails::Engine => "/sabisu_rails"
   devise_for :users
   #Определение API
   namespace :api, defaults: { format: :json }, constraints: { subdomain: 'api' }, path: '/' do
