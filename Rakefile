@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MakemakeApi::Application.load_tasks
+MakeMakeApi::Application.load_tasks
