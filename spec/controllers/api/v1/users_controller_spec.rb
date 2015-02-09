@@ -12,7 +12,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       expect(user_response[:email]).to eql @user.email
     end
 
-    it { should respond_with 200 }
+    it { is_expected.to respond_with 200 }
   end
 
   describe "POST #create" do
@@ -27,7 +27,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
         expect(user_response[:email]).to eql @user_attributes[:email]
       end
 
-      it { should respond_with 201 }
+      it { is_expected.to respond_with 201 }
     end
     context "when is not created" do
       before(:each) do
@@ -47,7 +47,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
         expect(user_response[:errors][:email]).to include "can't be blank"
       end
 
-      it { should respond_with 422 }
+      it { is_expected.to respond_with 422 }
     end
   end
 
@@ -64,7 +64,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
         expect(user_response[:email]).to eql "newmail@example.com"
       end
 
-      it { should respond_with 200 }
+      it { is_expected.to respond_with 200 }
     end
 
     context "when is not created" do
@@ -84,7 +84,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
         expect(user_response[:errors][:email]).to include "is invalid"
       end
 
-      it { should respond_with 422 }
+      it { is_expected.to respond_with 422 }
     end
   end
 
@@ -94,7 +94,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       delete :destroy, { id: @user.id }
     end
 
-    it { should respond_with 204 }
+    it { is_expected.to respond_with 204 }
   end
 
 end
